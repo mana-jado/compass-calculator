@@ -1790,7 +1790,7 @@
           "mechanics":{
             "periodic": {
               "name": "召唤物攻击",
-              "interval": 1000,
+              "interval": 500,
               "multiplier": 1.4
             }
           }
@@ -1799,7 +1799,7 @@
           "mechanics":{
             "periodic": {
               "name": "召唤物攻击",
-              "interval": 2000,
+              "interval": 1000,
               "multiplier": 1.4
             }
           },
