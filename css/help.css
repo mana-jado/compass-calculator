@@ -1,0 +1,29 @@
+
+/* Help Icon */
+.help-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.help-icon:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Ensure modal content is scrollable if too long */
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}

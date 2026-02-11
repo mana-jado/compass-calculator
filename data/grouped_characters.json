@@ -1,0 +1,4789 @@
+{
+  "characters": [
+    {
+      "id": "atari",
+      "name": "十文字アタリ",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1,
+        "defense_multiplier": 1,
+        "health_multiplier": 1,
+        "move_speed": 2.71
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4000,
+          270,
+          830,
+          1330,
+          1930,
+          3170
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.33
+      },
+      "overrides": {},
+      "variants": {
+        "普攻+必杀召唤物":{
+          "mechanics":{
+            "periodic":{
+              "name":"16bit小怪",
+              "interval":600,
+              "multiplier":2.40
+            }
+          }
+        },
+        "仅必杀召唤物":{
+          "base_action": {
+            "motion_multiplier": 0,
+            "pitch": [600, 600]
+          },
+          "mechanics":{
+            "periodic":{
+              "name":"16bit小怪",
+              "interval":600,
+              "multiplier":2.40
+            }
+          }
+        }
+      },
+      "theme_color": "#fa5a4a",
+      "cn_name": "十文字 雅达利"
+    },
+    {
+      "id": "justice",
+      "name": "ジャスティス ハンコック",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.5,
+        "health_multiplier": 0.95,
+        "move_speed": 2.21
+      },
+      "attributes": {
+        "range": 5.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          7060,
+          270,
+          1130,
+          2230,
+          3230,
+          3600,
+          3870,
+          5200
+        ]
+      },
+      "hero_action": {
+        "name": "多層型ヘキサバリア",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#a9cffc",
+      "cn_name": "正义 汉考克"
+    },
+    {
+      "id": "ririka",
+      "name": "リリカ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.2,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 0.85,
+        "move_speed": 2.52
+      },
+      "attributes": {
+        "range": 18,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5840,
+          430,
+          1130,
+          2230,
+          3370,
+          5000
+        ]
+      },
+      "hero_action": {
+        "name": "ドリーム☆バキューン",
+        "damage_multiplier": 2.2,
+        "start_time": 0.7,
+        "end_time": 1.7
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{
+          "name":"被动",
+          "stats":{"attack_scaling_factor":1.4}
+        },
+        "必杀":{
+          "name":"必杀",
+          "stats":{"attack_scaling_factor":2.0}
+        },
+        "被动+必杀":{
+          "name":"被动+必杀",
+          "stats":{"attack_scaling_factor":2.8}
+        }
+      },
+      "theme_color": "#fea3b2",
+      "cn_name": "莉莉卡"
+    },
+    {
+      "id": "noho",
+      "name": "双挽乃保",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.9,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 4.4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.7,
+        "pitch": [
+          6466,
+          367,
+          500,
+          633,
+          767,
+          900,
+          1000,
+          1800,
+          1900,
+          2000,
+          2100,
+          2200,
+          2300,
+          2967,
+          3067,
+          3167,
+          3267,
+          3367,
+          3467,
+          4267,
+          4400,
+          4533,
+          4667,
+          4833,
+          5000
+        ]
+      },
+      "hero_action": {
+        "name": "双挽チェーンソウの爆発",
+        "damage_multiplier": 4.5,
+        "start_time": 4.06,
+        "end_time": 5
+      },
+      "variants": {
+        "必杀":{
+          "mechanics":{
+            "speed_modifier":{"multiplier":0.5}
+          }
+        }
+      },
+      "theme_color": "#a484b3",
+      "cn_name": "双挽 乃保"
+    },
+    {
+      "id": "tadaomi",
+      "name": "桜華忠臣",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1.15,
+        "move_speed": 2.41
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          2900,
+          333,
+          700,
+          1233,
+          1500,
+          1900
+        ]
+      },
+      "hero_action": {
+        "name": "妖華穿突刃",
+        "damage_multiplier": 1.1,
+        "start_time": 1.6,
+        "end_time": 3.2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#8ab64b",
+      "cn_name": "樱华 忠臣"
+    },
+    {
+      "id": "junnu",
+      "name": "ジャンヌ ダルク",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.1,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1.5,
+        "move_speed": 2.45
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3833,
+          267,
+          767,
+          1267,
+          1967,
+          2800
+        ]
+      },
+      "hero_action": {
+        "name": "聖女の祝福",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#fce86b",
+      "cn_name": "贞德"
+    },
+    {
+      "id": "marcos",
+      "name": "マルコス'55",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.05,
+        "defense_multiplier": 1.05,
+        "health_multiplier": 0.8,
+        "move_speed": 2.65
+      },
+      "attributes": {
+        "range": 4.7,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4639,
+          270,
+          620,
+          1091,
+          1450,
+          1970,
+          2333,
+          2789,
+          3360,
+          3738
+        ]
+      },
+      "hero_action": {
+        "name": "ちょっと痛いよ？",
+        "damage_multiplier": 1.2,
+        "start_time": 0.53,
+        "end_time": 0.63
+      },
+      "overrides": {},
+      "variants": {
+        "1凸": {
+          "stats": {
+            "attack_scaling_factor": 1.2,
+            "defense_multiplier": 1.26,
+            "health_multiplier": 0.8,
+            "move_speed": 2.65
+          },
+          "name": "マルコス'55(1凸)"
+        },
+        "2凸": {
+          "stats": {
+            "attack_scaling_factor": 1.44,
+            "defense_multiplier": 1.51,
+            "health_multiplier": 0.8,
+            "move_speed": 2.65
+          },
+          "name": "マルコス'55(2凸)"
+        },
+        "3凸": {
+          "stats": {
+            "attack_scaling_factor": 1.73,
+            "defense_multiplier": 1.81,
+            "health_multiplier": 0.8,
+            "move_speed": 2.65
+          },
+          "name": "マルコス'55(3凸)"
+        }
+      },
+      "mechanics": {},
+      "theme_color": "#faa067",
+      "cn_name": "马尔克斯'55"
+    },
+    {
+      "id": "rutiano",
+      "name": "ルチアーノ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 0.9,
+        "move_speed": 2.18
+      },
+      "attributes": {
+        "range": 13,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.76,
+        "pitch": [
+          6660,
+          370,
+          630,
+          840,
+          1570,
+          1770,
+          2010,
+          2540,
+          2780,
+          2960,
+          3570,
+          3760,
+          4050,
+          4740,
+          4950,
+          5120
+        ]
+      },
+      "hero_action": {
+        "name": "死神の舞踏",
+        "damage_multiplier": 1.9,
+        "start_time": 0.43,
+        "end_time": 1
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#6e706d",
+      "cn_name": "卢西安诺"
+    },
+    {
+      "id": "void",
+      "name": "Voidoll",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 0.9,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 1,
+        "move_speed": 2.71
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5290,
+          370,
+          1290,
+          2130,
+          3120,
+          3940
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.54
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#dddfda",
+      "cn_name": "Voidoll"
+    },
+    {
+      "id": "matoi",
+      "name": "深川まとい",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1,
+        "move_speed": 2.25
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6730,
+          400,
+          1270,
+          2370,
+          3630,
+          4650,
+          5730
+        ]
+      },
+      "hero_action": {
+        "name": "深川印の新型火筒",
+        "damage_multiplier": 1.4,
+        "start_time": 0.7,
+        "end_time": 2.5
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{
+          "stats": {"attack_scaling_factor": 1.37}
+        }
+      },
+      "theme_color": "#7786fb",
+      "cn_name": "深川 缠"
+    },
+    {
+      "id": "sol",
+      "name": "ソル=バッドガイ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1.1,
+        "move_speed": 2.52
+      },
+      "attributes": {
+        "range": 4.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5130,
+          270,
+          830,
+          1520,
+          2030,
+          2770,
+          3730
+        ]
+      },
+      "hero_action": {
+        "name": "グランドヴァイパー",
+        "damage_multiplier": 1.21,
+        "start_time": 1.06,
+        "end_time": 2.5
+      },
+      "overrides": {},
+      "variants": {
+        "1杀":{"stats": {"attack_multiplier": 1.12}},
+        "2杀":{"stats": {"attack_multiplier": 1.24}},
+        "3杀":{"stats": {"attack_multiplier": 1.36}},
+        "4杀":{"stats": {"attack_multiplier": 1.48}},
+        "5杀":{"stats": {"attack_multiplier": 1.60}},
+        "6杀":{"stats": {"attack_multiplier": 1.72}},
+        "必杀":{"stats": {"attack_multiplier": 12}}
+      },
+      "theme_color": "#DC143C",
+      "cn_name": "索尔"
+    },
+    {
+      "id": "dezzy",
+      "name": "ディズィー",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 0.5,
+        "move_speed": 2.72
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4133,
+          367,
+          1033,
+          1633,
+          2500,
+          303,
+          3633
+        ]
+      },
+      "hero_action": {
+        "name": "拠点拡大速度上昇",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#1E90FF",
+      "cn_name": "帝姬"
+    },
+    {
+      "id": "gustav",
+      "name": "グスタフ ハイドリヒ",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.5,
+        "health_multiplier": 1.5,
+        "move_speed": 2.64
+      },
+      "attributes": {
+        "range": 4.6,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": [1,0.66,0.66,0.66],
+        "pitch": [
+          7058,
+          530,
+          618,
+          795,
+          972,
+          1410,
+          1862,
+          2053,
+          2230,
+          2729,
+          3230,
+          3410,
+          3590,
+          4445,
+          5301,
+          5484,
+          5667
+        ]
+      },
+      "hero_action": {
+        "name": "禁忌の波動",
+        "damage_multiplier": 12,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#ce85e8",
+      "cn_name": "古斯塔夫"
+    },
+    {
+      "id": "tesra",
+      "name": "ニコラ テスラ",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.5,
+        "health_multiplier": 1.4,
+        "move_speed": 2.78
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4250,
+          660,
+          1420,
+          2250,
+          3130
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.13,
+        "end_time": 1.53
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#98dcaf",
+      "cn_name": "尼古拉 特斯拉"
+    },
+    {
+      "id": "miku",
+      "name": "ミク",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.05,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 1.05,
+        "move_speed": 2.7
+      },
+      "attributes": {
+        "range": 7,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          9773,
+          739,
+          1279,
+          2375,
+          3333,
+          3893,
+          4793,
+          5983,
+          6483,
+          8193,
+          9023
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.27,
+        "end_time": 1.67
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#39C5BB",
+      "cn_name": "初音未来"
+    },
+    {
+      "id": "vioreta",
+      "name": "ヴィオレッタ ノワール",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 0.95,
+        "defense_multiplier": 1.3,
+        "health_multiplier": 1.35,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6980,
+          620,
+          1850,
+          3090,
+          4060,
+          5290,
+          6460
+        ]
+      },
+      "hero_action": {
+        "name": "サイレントコンサート",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#eed055",
+      "cn_name": "薇欧莉特"
+    },
+    {
+      "id": "cocrico",
+      "name": "コクリコット ブランシュ",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 1.5,
+        "health_multiplier": 0.5,
+        "move_speed": 2.78
+      },
+      "attributes": {
+        "range": 4.4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          8480,
+          680,
+          1450,
+          2450,
+          2870,
+          4050,
+          4420,
+          4760,
+          6300,
+          6960
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1,
+        "end_time": 1.37
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#a6c0e9",
+      "cn_name": "可可"
+    },
+    {
+      "id": "ryu",
+      "name": "リュウ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 1.2,
+        "move_speed": 2.48
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3467,
+          233,
+          667,
+          1033,
+          1567,
+          1967,
+          2500
+        ]
+      },
+      "hero_action": {
+        "name": "カード威力タメ",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#7dc2f3",
+      "cn_name": "隆"
+    },
+    {
+      "id": "tyunri",
+      "name": "春麗",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.25,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 1,
+        "move_speed": 2.65
+      },
+      "attributes": {
+        "range": 4.2,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5140,
+          520,
+          1500,
+          2490,
+          3260,
+          4330
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.17,
+        "end_time": 1.57
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#0066CC",
+      "cn_name": "春丽"
+    },
+    {
+      "id": "maria",
+      "name": "マリア=S=レオンブルク",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.2,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 0.95,
+        "move_speed": 2.25
+      },
+      "attributes": {
+        "range": 7.6,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.66,
+        "pitch": [
+          4803,
+          430,
+          521,
+          612,
+          703,
+          794,
+          1185,
+          1285,
+          1385,
+          1485,
+          1585,
+          1949,
+          2050,
+          2152,
+          2253,
+          2355,
+          2764,
+          2870,
+          2977,
+          3083,
+          3190,
+          3581,
+          3694,
+          3807,
+          3920,
+          4033
+        ]
+      },
+      "hero_action": {
+        "name": "セルピエンテ・エリダ",
+        "damage_multiplier": 1.2,
+        "start_time": 1.53,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {
+                "被动":{"stats": {"attack_scaling_factor": 1.4}}
+      },
+      "theme_color": "#f25652",
+      "cn_name": "王女"
+    },
+    {
+      "id": "adam",
+      "name": "アダム=ユーリエフ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 1,
+        "move_speed": 2.67
+      },
+      "attributes": {
+        "range": 4.7,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3200,
+          200,
+          667,
+          1167,
+          1700,
+          2233
+        ]
+      },
+      "hero_action": {
+        "name": "リオート・メーチ",
+        "damage_multiplier": 1.9,
+        "start_time": 1.1,
+        "end_time": 2.5
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.37}}
+      },
+      "theme_color": "#78def8",
+      "cn_name": "亚当"
+    },
+    {
+      "id": "thirteen",
+      "name": "サーティーン(gun)",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 0.9,
+        "move_speed": 2.47
+      },
+      "attributes": {
+        "range": 14,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4433,
+          400,
+          933,
+          1600,
+          2333,
+          3400
+        ]
+      },
+      "hero_action": {
+        "name": "堕天の一撃",
+        "damage_multiplier": 1.35,
+        "start_time": 0.43,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {
+        "必杀buff": {
+          "stats": {
+            "attack_scaling_factor": 1.35,
+            "defense_multiplier": 0.98,
+            "health_multiplier": 0.9,
+            "move_speed": 3.18
+          }
+        }
+      },
+      "theme_color": "#939997",
+      "cn_name": "13 (枪)"
+    },
+    {
+      "id": "thirteen_atk",
+      "name": "サーティーン(atk)",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.9,
+        "move_speed": 2.64
+      },
+      "attributes": {
+        "range": 4.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5167,
+          200,
+          560,
+          1300,
+          1833,
+          2967,
+          3467,
+          4033
+        ]
+      },
+      "hero_action": {
+            "name": "堕天の一撃",
+            "damage_multiplier": 2.5,
+            "start_time": 0.4,
+            "end_time": 2.5
+      },
+      "overrides": {},
+      "variants": {
+        "必杀buff": {
+          "stats": {
+            "attack_scaling_factor": 1.35,
+            "defense_multiplier": 1.96,
+            "health_multiplier": 0.9,
+            "move_speed": 3.05
+          }
+        }
+      },
+      "theme_color": "#939997",
+      "cn_name": "13 (拳)"
+    },
+    {
+      "id": "yusya",
+      "name": "かけだし勇者",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1,
+        "defense_multiplier": 1,
+        "health_multiplier": 1,
+        "move_speed": 2.78
+      },
+      "attributes": {
+        "range": 4.2,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3650,
+          240,
+          710,
+          1310,
+          1820,
+          2550,
+          2820,
+          2980,
+          3012,
+          3128,
+          3208
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ジャンプ)",
+        "damage_multiplier": 0.01,
+        "start_time": 2,
+        "end_time": 2.5
+      },
+      "overrides": {},
+      "variants": {
+        "必杀攻buff":{
+          "stats": {"attack_multiplier": 3.0}
+        }
+      },
+      "theme_color": "#939997",
+      "cn_name": "新手勇者"
+    },
+    {
+      "id": "emiria",
+      "name": "エミリア",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.8,
+        "move_speed": 2.59
+      },
+      "attributes": {
+        "range": 14,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.54,
+        "pitch": [
+          5620,
+          330,
+          580,
+          820,
+          1480,
+          1750,
+          2050,
+          2580,
+          2850,
+          3150,
+          3680,
+          3950,
+          4180,
+          4780,
+          5020,
+          5280
+        ]
+      },
+      "hero_action": {
+        "name": "前方味方回復",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{
+          "base_action": {
+            "pitch": [
+              4160,
+              270,
+              470,
+              670,
+              1100,
+              1330,
+              1570,
+              1930,
+              2130,
+              2370,
+              2730,
+              2970,
+              3170,
+              3750,
+              3770,
+              3970
+            ]
+        }
+        }
+      },
+      "theme_color": "#6A5ACD",
+      "cn_name": "艾米莉亚"
+    },
+    {
+      "id": "rem",
+      "name": "レム",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.85,
+        "health_multiplier": 1.1,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 8,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6230,
+          370,
+          1070,
+          2270,
+          3800,
+          5130
+        ]
+      },
+      "hero_action": {
+        "name": "鉄球叩きつけ",
+        "damage_multiplier": 2,
+        "start_time": 1.74,
+        "end_time": 2.5
+      },
+      "overrides": {},
+      "variants": {
+        "75%HP":{"stats":{"attack_scaling_factor":1.09}},
+        "50%HP":{"stats":{"attack_scaling_factor":1.34}},
+        "25%HP":{"stats":{"attack_scaling_factor":1.74}},
+        "1%HP":{"stats":{"attack_scaling_factor":2.30}},
+        "满血必杀":{
+          "stats":{"attack_scaling_factor":5.0},
+          "mechanics": {"speed_modifier":{"multiplier":0.606}}
+        },
+        "1%血必杀":{
+          "stats":{"attack_scaling_factor":11.5},
+          "mechanics": {"speed_modifier":{"multiplier":0.606}}
+        }
+      },
+      "theme_color": "#4169E1",
+      "cn_name": "雷姆"
+    },
+    {
+      "id": "ky",
+      "name": "カイ=キスク",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.85,
+        "health_multiplier": 0.95,
+        "move_speed": 2.5
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3770,
+          300,
+          870,
+          1430,
+          2170,
+          2800
+        ]
+      },
+      "hero_action": {
+        "name": "スタンディッパー",
+        "damage_multiplier": 3.5,
+        "start_time": 2.35,
+        "end_time": 3.5
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#006400",
+      "cn_name": "凯"
+    },
+    {
+      "id": "megu",
+      "name": "メグメグ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 0.9,
+        "move_speed": 2.65
+      },
+      "attributes": {
+        "range": 16,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.36,
+        "pitch": [
+          400,
+          200,
+          400
+        ]
+      },
+      "hero_action": {
+        "name": "ばっちーのしょーどく",
+        "damage_multiplier": 0.715,
+        "start_time": 0.2,
+        "end_time": 0.4
+      },
+      "overrides": {},
+      "variants": {
+        "蓄力":{
+          "base_action": {
+            "motion_multiplier": 0.715,
+            "pitch": [
+              160,
+              160
+            ]
+          }
+        },
+        "必杀":{
+          "base_action": {
+            "motion_multiplier": 0.88,
+            "pitch": [
+              500,
+              500
+            ]
+          }
+        }
+      },
+      "theme_color": "#f48cc1",
+      "cn_name": "梅古梅古"
+    },
+    {
+      "id": "rin",
+      "name": "リン",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 0.9,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 14,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          7500,
+          330,
+          1170,
+          2100,
+          2600,
+          3500,
+          4230,
+          5200,
+          6000,
+          6770,
+          7370
+        ]
+      },
+      "hero_action": {
+        "name": "前方味方バフ",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "必杀":{"stats": {"attack_scaling_factor": 3.0}}
+      },
+      "theme_color": "#FFD700",
+      "cn_name": "镜音铃"
+    },
+    {
+      "id": "ren",
+      "name": "レン",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 0.95,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 1.35,
+        "move_speed": 2.61
+      },
+      "attributes": {
+        "range": 7,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          9630,
+          340,
+          1130,
+          2110,
+          3330,
+          3610,
+          4530,
+          5770,
+          6540,
+          6970,
+          7790,
+          8950
+        ]
+      },
+      "hero_action": {
+        "name": "自身回復味方バフ",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "必杀":{
+          "base_action": {
+            "motion_multiplier": 2.5,
+            "pitch": [
+              200,
+              200
+            ]
+          }
+        }
+      },
+      "theme_color": "#FF4500",
+      "cn_name": "镜音连"
+    },
+    {
+      "id": "istaka",
+      "name": "イスタカ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.2,
+        "defense_multiplier": 0.6,
+        "health_multiplier": 1.25,
+        "move_speed": 2.41
+      },
+      "attributes": {
+        "range": 13,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6730,
+          420,
+          1760,
+          3250,
+          4620,
+          5770
+        ]
+      },
+      "hero_action": {
+        "name": "バディストライク",
+        "damage_multiplier": 0.767,
+        "start_time": 0.6,
+        "end_time": 0.9
+      },
+      "overrides": {},
+      "variants": {
+        "挂鸟":{
+          "stats": {"attack_scaling_factor": 1.4},
+          "periodic": {
+            "name": "老鹰",
+            "interval": 650,
+            "multiplier": 1.35
+          }
+        }
+      },
+      "theme_color": "#8d8cdc",
+      "cn_name": "伊斯塔卡"
+    },
+    {
+      "id": "zac",
+      "name": "ザック&レイチェル",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.25,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 0.9,
+        "move_speed": 2.64
+      },
+      "attributes": {
+        "range": 5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4080,
+          270,
+          800,
+          1150,
+          1720,
+          2250,
+          2900,
+          3730
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.26,
+        "end_time": 1.66
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#8B0000",
+      "cn_name": "扎克"
+    },
+    {
+      "id": "kirara",
+      "name": "輝龍院きらら",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 0.95,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 0.85,
+        "move_speed": 2.71
+      },
+      "attributes": {
+        "range": 4.2,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3200,
+          133,
+          300,
+          533,
+          667,
+          867,
+          1000,
+          1100,
+          1367,
+          1733,
+          1933,
+          2000,
+          2533
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.56
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#f9837e",
+      "cn_name": "辉龙院 绮罗"
+    },
+    {
+      "id": "monokuma",
+      "name": "モノクマ",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 0.95,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4230,
+          300,
+          800,
+          1370,
+          1930,
+          2330,
+          3230
+        ]
+      },
+      "hero_action": {
+        "name": "デバフ空間展開",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "领域内":{"mechanics":{"target_def_multiplier": 0.2}}
+      },
+      "theme_color": "#000000",
+      "cn_name": "黑白熊"
+    },
+    {
+      "id": "poro",
+      "name": "ポロロッチョ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.65,
+        "health_multiplier": 0.9,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4330,
+          300,
+          630,
+          870,
+          1430,
+          1770,
+          1860,
+          2130,
+          2730,
+          3330
+        ]
+      },
+      "hero_action": {
+        "name": "ラブリッツ",
+        "damage_multiplier": 1.7,
+        "start_time": 0.61,
+        "end_time": 1
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#fef788",
+      "cn_name": "波罗罗乔"
+    },
+    {
+      "id": "aqua",
+      "name": "アクア",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.1,
+        "defense_multiplier": 1.1,
+        "health_multiplier": 1.1,
+        "move_speed": 2.7
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4360,
+          300,
+          900,
+          1730,
+          2630,
+          3530
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ゴッドブロー)",
+        "damage_multiplier": 3.5,
+        "start_time": 1.3,
+        "end_time": 1.7
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#00BFFF",
+      "cn_name": "阿库娅"
+    },
+    {
+      "id": "megumin",
+      "name": "めぐみん",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 0.95,
+        "defense_multiplier": 1.3,
+        "health_multiplier": 1.5,
+        "move_speed": 2.64
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6070,
+          440,
+          1230,
+          2460,
+          3730,
+          4860
+        ]
+      },
+      "hero_action": {
+        "name": "自身回復+HS上昇",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#FF0000",
+      "cn_name": "惠惠"
+    },
+    {
+      "id": "sorn",
+      "name": "ソーン=ユーリエフ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.2,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 0.65,
+        "move_speed": 2.51
+      },
+      "attributes": {
+        "range": 18,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3167,
+          400,
+          1000,
+          1533,
+          2267,
+          2867
+        ]
+      },
+      "hero_action": {
+        "name": "リオート・メーチ",
+        "damage_multiplier": 3.2,
+        "start_time": 0.7,
+        "end_time": 1.9
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#e0e0db",
+      "cn_name": "索恩"
+    },
+    {
+      "id": "levi",
+      "name": "リヴァイ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.25,
+        "health_multiplier": 0.95,
+        "move_speed": 2.68
+      },
+      "attributes": {
+        "range": 4.2,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3000,
+          167,
+          533,
+          933,
+          1467,
+          2033
+        ]
+      },
+      "hero_action": {
+        "name": "スナップブレード",
+        "damage_multiplier": 1.8,
+        "start_time": 1.7,
+        "end_time": 2.6
+      },
+      "overrides": {},
+      "variants": {},
+      "mechanics": {
+        "state_evolution": {
+          "type": "hit_count_buff",
+          "max_stacks": 10,
+          "increment_per_stack": 0.07
+        }
+      },
+      "theme_color": "#2F4F4F",
+      "cn_name": "利威尔"
+    },
+    {
+      "id": "delmin",
+      "name": "デビルミント鬼龍 デルミン",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 1.25,
+        "health_multiplier": 0.85,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 4.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": [1,1,1,4.8],
+        "pitch": [
+          3460,
+          230,
+          530,
+          1070,
+          1960
+        ]
+      },
+      "hero_action": {
+        "name": "デルミンしゅばばっ",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#85caf6",
+      "cn_name": "鬼龙"
+    },
+    {
+      "id": "tomas",
+      "name": "トマス",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.65,
+        "health_multiplier": 1.5,
+        "move_speed": 2.16
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4230,
+          300,
+          1000,
+          1430,
+          1800,
+          2370,
+          2570,
+          2770,
+          3400
+        ]
+      },
+      "hero_action": {
+        "name": "魂の誓い",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "普攻+双箱子必杀":{
+          "mechanics":{
+            "periodic": {
+              "name": "召唤物攻击",
+              "interval": 1000,
+              "multiplier": 1.4
+            }
+          }
+        },
+        "仅原地单箱子必杀":{
+          "mechanics":{
+            "periodic": {
+              "name": "召唤物攻击",
+              "interval": 2000,
+              "multiplier": 1.4
+            }
+          },
+          "base_action": {
+            "motion_multiplier": 0,
+            "pitch": [
+              2000,
+              2000
+            ]
+          }
+        }
+      },
+      "theme_color": "#c9c3fb",
+      "cn_name": "托马斯"
+    },
+    {
+      "id": "nekomiya_ar",
+      "name": "猫宮ひなた(AR)",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.65,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 17,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.395,
+        "pitch": [
+          9233,
+          367,
+          467,
+          567,
+          933,
+          1033,
+          1133,
+          1500,
+          1600,
+          1700,
+          2067,
+          2167,
+          2267,
+          2633,
+          2733,
+          2833,
+          3200,
+          3300,
+          3400,
+          3767,
+          3867,
+          3967,
+          4333,
+          4433,
+          4533,
+          4900,
+          5000,
+          5100,
+          5467,
+          5567,
+          5667,
+          6033,
+          6133,
+          6233
+        ]
+      },
+      "hero_action": {
+        "name": "スタングレネード",
+        "damage_multiplier": 2.2,
+        "start_time": 1.01,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#FFC0CB",
+      "cn_name": "猫宫日向(步枪)"
+    },
+    {
+      "id": "nekomiya_sg",
+      "name": "猫宮ひなた(SG)",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.65,
+        "move_speed": 2.75
+      },
+      "attributes": {
+        "range": 8,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3600,
+          167,
+          567,
+          967,
+          1367,
+          1767,
+          2167,
+          2567,
+          2967,
+          3367
+        ]
+      },
+      "hero_action": {
+        "name": "スタングレネード",
+        "damage_multiplier": 2.2,
+        "start_time": 1.01,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#FFC0CB",
+      "cn_name": "猫宫日向(霰弹)"
+    },
+    {
+      "id": "okabe",
+      "name": "岡部 倫太郎",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.6,
+        "health_multiplier": 0.9,
+        "move_speed": 2.5
+      },
+      "attributes": {
+        "range": 14,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3200,
+          260,
+          1060,
+          1860,
+          2660
+        ]
+      },
+      "hero_action": {
+        "name": "粒子砲チャージ",
+        "damage_multiplier": 0.8,
+        "start_time": 1.4,
+        "end_time": 2.6
+      },
+      "overrides": {},
+      "variants": {
+        "蓄力":{
+          "base_action": {
+            "motion_multiplier": [1,0.385,0.385,0.385,0.385,0.385],
+            "pitch": [
+              3200,
+              260,320,380,440,500,560,
+              1060,1120,1180,1240,1300,1360,
+              1860,1920,1980,2040,2100,2160,
+              2660,2720,2780,2840,2900,2960
+            ]
+          }
+        }
+        
+      },
+      "theme_color": "#2F4F4F",
+      "cn_name": "冈部 伦太郎"
+    },
+    {
+      "id": "layer",
+      "name": "零夜",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.9,
+        "move_speed": 2.77
+      },
+      "attributes": {
+        "range": 7.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3450,
+          1000,
+          1670,
+          2180,
+          2690,
+          3200,
+          3680
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.36
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#ccfc3a",
+      "cn_name": "零夜"
+    },
+    {
+      "id": "saver",
+      "name": "セイバーオルタ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.95,
+        "move_speed": 2.65
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3910,
+          260,
+          800,
+          1430,
+          2030,
+          2700
+        ]
+      },
+      "hero_action": {
+        "name": "卑王鉄槌",
+        "damage_multiplier": 2,
+        "start_time": 0.7,
+        "end_time": 1.3
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              0,
+              1000,
+              700
+            ],
+            [
+              0,
+              2800,
+              1920,
+              2320
+            ],
+            [
+              0,
+              5300,
+              3720,
+              4120,
+              4800
+            ]
+          ]
+        }
+      },
+      "variants": {},
+      "theme_color": "#191970",
+      "cn_name": "黑呆"
+    },
+    {
+      "id": "gil",
+      "name": "ギルガメッシュ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 1.2,
+        "move_speed": 2.13
+      },
+      "attributes": {
+        "range": 18,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.45,
+        "pitch": [
+          4700,
+          300,630,930,1470,
+          1770,2100,2500,2830,
+          3130,3820,4100,4400
+        ]
+      },
+      "hero_action": {
+        "name": "天の鎖",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "4-1":{
+          "base_action": {
+            "pitch": [
+              6960,
+              330,670,1500,1870,
+              2600,2930,3930,4230,
+              4870,5170,6300,6630
+            ]
+          }
+        },
+        "3-2":{
+          "base_action": {
+            "pitch": [
+              5060,
+              330,650,980,1550,
+              1920,2220,2680,3030,
+              3350,4050,4380,4730
+            ]
+          }
+        },
+        "2-3":{
+          "base_action": {
+            "pitch": [
+              3790,
+              310,520,700,1050,
+              1580,1820,1980,2320,
+              2780,2980,3170,3480
+            ]
+          }
+        },
+        "1-4":{
+          "base_action": {
+            "pitch": [
+              3350,
+              300,500,670,850,
+              1050,1600,1800,2020,
+              2200,2380,2830,3050
+            ]
+          }
+        }
+      },
+      "theme_color": "#FFD700",
+      "cn_name": "吉尔伽美什(枪)"
+    },
+    {
+      "id": "luruka",
+      "name": "ルルカ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 1.05,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6330,
+          350,
+          930,
+          1780,
+          2400,
+          2850,
+          3270,
+          5220
+        ]
+      },
+      "hero_action": {
+        "name": "ドリーム☆ズキューン",
+        "damage_multiplier": 3,
+        "start_time": 0.77,
+        "end_time": 1.3
+      },
+      "overrides": {},
+      "variants": {
+        "莉莉卡莉莉卡莉莉卡":{"stats": {"attack_scaling_factor": 1.8}},
+        "仅必杀":{
+          "base_action": {
+            "motion_multiplier": 2.0,
+            "pitch": [
+              300,
+              300
+            ]
+          }
+        },
+        "仅黑必杀":{
+          "base_action": {
+            "motion_multiplier": 3.6,
+            "pitch": [
+              300,
+              300
+            ]
+          }
+        }
+      },
+      "theme_color": "#fdcd50",
+      "cn_name": "露露卡"
+    },
+    {
+      "id": "pierre",
+      "name": "ピエール77世",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 0.5,
+        "defense_multiplier": 0.5,
+        "health_multiplier": 1.5,
+        "move_speed": 2.76
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5510,
+          200,
+          520,
+          950,
+          1420,
+          2020,
+          2550,
+          2620,
+          2720,
+          2780,
+          3320,
+          3550,
+          3820,
+          4220
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(カロリーダイブ)",
+        "damage_multiplier": 1,
+        "start_time": 1.46,
+        "end_time": 1.94
+      },
+      "overrides": {},
+      "variants": {
+        "必杀": {
+          "stats": {
+            "attack_scaling_factor": 4,
+            "defense_multiplier": 1.5,
+            "health_multiplier": 1.5,
+            "move_speed": 3.86
+          },
+          "attributes": {
+            "range": 8,
+            "color": "white"
+          },
+          "base_action": {
+            "motion_multiplier": 1,
+            "pitch": [
+              5860,
+              170,
+              530,
+              900,
+              1230,
+              1630,
+              2070,
+              2470,
+              2770,
+              2970,
+              3200,
+              3430,
+              3630,
+              3870,
+              4000,
+              4230,
+              4370,
+              4500,
+              4700,
+              4870,
+              5100,
+              5470
+            ]
+          }
+        }
+      },
+      "theme_color": "#ac88f1",
+      "cn_name": "皮埃尔77世"
+    },
+    {
+      "id": "tadanobu",
+      "name": "佐藤四郎兵衛忠信",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 1.3,
+        "move_speed": 2.46
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3433,
+          300,
+          767,
+          1267,
+          1867,
+          2633
+        ]
+      },
+      "hero_action": {
+        "name": "鉄石心の構え",
+        "damage_multiplier": 1,
+        "start_time": 0.53,
+        "end_time": 0.8
+      },
+      "overrides": {
+        "ha_damage": {
+          "formula": "ChargeLevel% * BuffedPHS"
+        }
+      },
+      "variants": {},
+      "theme_color": "#4B0082",
+      "cn_name": "忠信"
+    },
+    {
+      "id": "eyes",
+      "name": "アイズ・ヴァレンシュタイン",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.75,
+        "move_speed": 2.59
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3630,
+          270,
+          820,
+          1320,
+          2000,
+          2730
+        ]
+      },
+      "hero_action": {
+        "name": "エアリエル",
+        "damage_multiplier": 2.6,
+        "start_time": 0.8,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {
+        "蓄力buff":{"stats": {"attack_scaling_factor": 1.05}}
+      },
+      "theme_color": "#C0C0C0",
+      "cn_name": "剑姬"
+    },
+    {
+      "id": "amairo",
+      "name": "狐ヶ咲 甘色",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 0.9,
+        "move_speed": 2.64
+      },
+      "attributes": {
+        "range": 4.15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          2700,
+          270,
+          530,
+          830,
+          1330,
+          1830
+        ]
+      },
+      "hero_action": {
+        "name": "甘色一閃",
+        "damage_multiplier": 2.7,
+        "start_time": 0.8,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {
+        "必杀":{"mechanics": {"target_def_multiplier": 0}}
+      },
+      "theme_color": "#fcbafe",
+      "cn_name": "狐咲 甘色"
+    },
+    {
+      "id": "noctis",
+      "name": "ノクティス",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 1.2,
+        "health_multiplier": 0.95,
+        "move_speed": 2.61
+      },
+      "attributes": {
+        "range": 4.6,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3500,
+          300,
+          900,
+          1300,
+          1900,
+          2533
+        ]
+      },
+      "hero_action": {
+        "name": "シフトブレイク",
+        "damage_multiplier": 1.5,
+        "start_time": 0.7,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{
+          "base_action": {
+            "motion_multiplier": [1,0.5,0.5],
+            "pitch": [
+              3867,
+              300,533,667,
+              933,1100,1267,
+              1500,1633,1833,
+              2200,2300,2467,
+              2967,3100,3233
+            ]
+          }
+          
+        }
+      },
+      "mechanics": {},
+      "theme_color": "#00008B",
+      "cn_name": "诺克提斯"
+    },
+    {
+      "id": "nidhogg",
+      "name": "ニーズヘッグ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.9,
+        "move_speed": 2.58
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.41,
+        "pitch": [
+          380,
+          190,
+          380
+        ]
+      },
+      "hero_action": {
+        "name": "ラグナロク",
+        "damage_multiplier": 0.68,
+        "start_time": 1.4,
+        "end_time": 1.67
+      },
+      "overrides": {},
+      "variants": {
+        "蓄力":{
+          "base_action": {
+            "motion_multiplier": 0.68,
+            "pitch": [
+              270,
+              270
+            ]
+          }
+        }
+      },
+      "theme_color": "#f85d4e",
+      "cn_name": "高达"
+    },
+    {
+      "id": "atsushi",
+      "name": "中島 敦",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.25,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 1.15,
+        "move_speed": 2.76
+      },
+      "attributes": {
+        "range": 4.2,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4200,
+          300,
+          770,
+          1470,
+          2100,
+          3070
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(異能を切り裂く爪撃)",
+        "damage_multiplier": 2,
+        "start_time": 1.26,
+        "end_time": 1.74
+      },
+      "overrides": {},
+      "variants": {
+        "必杀":{"stats": {"attack_scaling_factor": 3.0}}
+      },
+      "theme_color": "#FAFAD2",
+      "cn_name": "中岛 敦"
+    },
+    {
+      "id": "akutagawa",
+      "name": "芥川 龍之介",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 0.8,
+        "move_speed": 2.38
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          9690,
+          370,
+          970,
+          1930,
+          2970,
+          4000,
+          4970,
+          6000,
+          7030,
+          8000,
+          9030
+        ]
+      },
+      "hero_action": {
+        "name": "羅生門・早蕨",
+        "damage_multiplier": 0.44,
+        "start_time": 0.9,
+        "end_time": 1.7
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"mechanics":{"speed_modifier":{"multiplier":0.769}}}
+      },
+      "theme_color": "#2F2F2F",
+      "cn_name": "芥川 龙之介"
+    },
+    {
+      "id": "gbg",
+      "name": "ゲームバズーカガール",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1,
+        "move_speed": 2.6
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5500,
+          330,
+          1070,
+          2030,
+          2900,
+          4030
+        ]
+      },
+      "hero_action": {
+        "name": "超重力子砲",
+        "damage_multiplier": 1.5,
+        "start_time": 0.45,
+        "end_time": 1.4
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              0,
+              2200,
+              1200
+            ],
+            [
+              0,
+              3200,
+              2200
+            ],
+            [
+              0,
+              4200,
+              3200
+            ]
+          ]
+        },
+        "ha_damage": {
+          "stages": [
+            1.5,
+            2.25,
+            3
+          ]
+        }
+      },
+      "variants": {},
+      "theme_color": "#70c8fc",
+      "cn_name": "GB girl"
+    },
+    {
+      "id": "ryza",
+      "name": "ライザリン・シュタウト",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 1.35,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6040,
+          230,
+          830,
+          1430,
+          1730,
+          2100,
+          3300,
+          5000
+        ]
+      },
+      "hero_action": {
+        "name": "投擲アイテム錬金+ライフ回復",
+        "damage_multiplier": 1,
+        "start_time": 1.8,
+        "end_time": 2.3
+      },
+      "overrides": {},
+      "variants": {
+        "蓄力永远丢火":{
+          "base_action": {
+            "motion_multiplier": 3.5,
+            "pitch": [
+              1100,
+              1100
+            ]
+          }
+        },
+        "蓄力轮流丢(不计毒伤)":{
+          "base_action": {
+            "motion_multiplier": [3.5,1,1,1],
+            "pitch": [
+              4400,
+              1100,2200,3300,4400
+            ]
+          }
+        }
+      },
+      "theme_color": "#228B22",
+      "cn_name": "莱莎"
+    },
+    {
+      "id": "alice",
+      "name": "青春 アリス",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 0.75,
+        "defense_multiplier": 0.6,
+        "health_multiplier": 1.45,
+        "move_speed": 2.65
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6440,
+          430,
+          1370,
+          2330,
+          3270,
+          4200,
+          5100
+        ]
+      },
+      "hero_action": {
+        "name": "不思議のトランプ",
+        "damage_multiplier": 1,
+        "start_time": 0.55,
+        "end_time": 0.92
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              1,
+              1300,
+              1160,
+              1200,
+              1240
+            ],
+            [
+              2,
+              1300,
+              1160,
+              1200,
+              1240
+            ]
+          ]
+        }
+      },
+      "variants": {},
+      "theme_color": "#a9feff",
+      "cn_name": "青春 爱丽丝"
+    },
+    {
+      "id": "joker",
+      "name": "ジョーカー",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.9,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 4.4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3730,
+          300,
+          800,
+          1370,
+          2030,
+          2670
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(回転斬り)",
+        "damage_multiplier": 1,
+        "start_time": 1.16,
+        "end_time": 1.36
+      },
+      "overrides": {
+        "hs_weakness_override": true,
+        "ha_damage": {
+          "multiplier": 2,
+          "condition": "hs_active"
+        }
+      },
+      "variants": {},
+      "theme_color": "#DF0100",
+      "cn_name": "Joker"
+    },
+    {
+      "id": "ignis",
+      "name": "イグニス=ウィル=ウィスプ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.25,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 1.1,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 4.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5970,
+          330,
+          770,
+          1230,
+          1870,
+          2470,
+          3930
+        ]
+      },
+      "hero_action": {
+        "name": "逃がさねえぜ",
+        "damage_multiplier": 2.4,
+        "start_time": 2,
+        "end_time": 4
+      },
+      "overrides": {},
+      "variants": {
+        "带烟":{
+          "mechanics": {
+            "extra_hits": [
+              {
+                "name": "烟",
+                "multiplier": 1.0,
+                "hit_count": 1
+              }
+            ]
+          }
+        }
+      },
+      "theme_color": "#f76bb9",
+      "cn_name": "灯头"
+    },
+    {
+      "id": "ainz",
+      "name": "アインズ・ウール・ゴウン",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.9,
+        "move_speed": 2.14
+      },
+      "attributes": {
+        "range": 14,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": [1,0.272,0.272,0.272],
+        "pitch": [
+          2900,
+          367,467,567,667,
+          1200,1267,1367,1433,
+          2000,2067,2167,2267
+        ]
+      },
+      "hero_action": {
+        "name": "グレーター・テレポーテーション",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "mechanics": {},
+      "theme_color": "#66023C",
+      "cn_name": "安兹·乌尔·恭"
+    },
+    {
+      "id": "rinne",
+      "name": "糸廻 輪廻",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.7,
+        "health_multiplier": 0.95,
+        "move_speed": 2.58
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.475,
+        "pitch": [
+          4633,
+          400,
+          467,
+          533,
+          933,
+          1000,
+          1100,
+          1933,
+          2000,
+          2067,
+          2767,
+          2833,
+          2900,
+          3633,
+          3700,
+          3767
+        ]
+      },
+      "hero_action": {
+        "name": "操糸操術Ж緊縛",
+        "damage_multiplier": 0.48,
+        "start_time": 2.15,
+        "end_time": 4.52
+      },
+      "overrides": {
+        "ha_pitch": {
+          "default": [
+            0,
+            4070,
+            1800,
+            2300,
+            2800
+          ]
+        }
+      },
+      "variants": {},
+      "theme_color": "#a58e90",
+      "cn_name": "糸回 轮回"
+    },
+    {
+      "id": "kirito",
+      "name": "キリト",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.85,
+        "health_multiplier": 1.05,
+        "move_speed": 2.61
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3730,
+          270,
+          730,
+          1270,
+          1700,
+          2570
+        ]
+      },
+      "hero_action": {
+        "name": "突進連撃",
+        "damage_multiplier": 1.45,
+        "start_time": 0.7,
+        "end_time": 1.3
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              0,
+              1000,
+              700
+            ],
+            [
+              0,
+              2217,
+              1701,
+              1991
+            ],
+            [
+              0,
+              6637,
+              3979,
+              4068,
+              4268,
+              4732,
+              4800,
+              4869,
+              4938,
+              5007,
+              5076,
+              5145,
+              5209
+            ]
+          ]
+        }
+      },
+      "variants": {},
+      "theme_color": "#2C2C2C",
+      "cn_name": "桐人"
+    },
+    {
+      "id": "asuna",
+      "name": "アスナ",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.25,
+        "health_multiplier": 0.95,
+        "move_speed": 2.71
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3900,
+          300,
+          830,
+          1370,
+          1900,
+          2770
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュ攻撃)",
+        "damage_multiplier": 0.82,
+        "start_time": 1.16,
+        "end_time": 1.33
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.3}}
+      },
+      "theme_color": "#F5DEB3",
+      "cn_name": "亚丝娜"
+    },
+    {
+      "id": "bugdoll",
+      "name": "Bugdoll",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 0.7,
+        "move_speed": 2.5
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3100,
+          333,
+          967,
+          1433,
+          2333
+        ]
+      },
+      "hero_action": {
+        "name": "#イレギュラーウィング",
+        "damage_multiplier": 0.57,
+        "start_time": 1.3,
+        "end_time": 1.5
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#6a9db0",
+      "cn_name": "Bugdoll"
+    },
+    {
+      "id": "steria",
+      "name": "ステリア・ララ・シルワ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 1.45,
+        "health_multiplier": 0.95,
+        "move_speed": 2.08
+      },
+      "attributes": {
+        "range": 6.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4770,
+          230,
+          530,
+          1100,
+          1700,
+          2630,
+          2770,
+          2930,
+          3100,
+          3500
+        ]
+      },
+      "hero_action": {
+        "name": "華槍術オスマンティウス",
+        "damage_multiplier": 0.97,
+        "start_time": 1.7,
+        "end_time": 3.2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#3ed0af",
+      "cn_name": "丝黛莉娅"
+    },
+    {
+      "id": "ram",
+      "name": "ラム",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.65,
+        "health_multiplier": 1.3,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 8,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3600,
+          367,
+          867,
+          1400,
+          1967,
+          2467
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.33
+      },
+      "overrides": {},
+      "variants": {
+        "必杀":{
+          "stats": {"attack_scaling_factor": 3},
+          "base_action": {
+            "motion_multiplier": 1,
+            "pitch": [
+              2333,
+              167,
+              567,
+              1033,
+              1533
+            ]
+          }
+        }
+      },
+      "theme_color": "#FF69B4",
+      "cn_name": "拉姆"
+    },
+    {
+      "id": "2b",
+      "name": "2B",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.85,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          7750,
+          330,
+          870,
+          1500,
+          1730,
+          2000,
+          2630,
+          2970,
+          3300,
+          3870,
+          4200,
+          4500,
+          5230,
+          6070
+        ]
+      },
+      "hero_action": {
+        "name": "回転切り",
+        "damage_multiplier": 2.2,
+        "start_time": 2.3,
+        "end_time": 3.4
+      },
+      "overrides": {},
+      "variants": {
+        "普攻+机枪":{
+          "mechanics":{
+            "periodic": {
+              "name": "机枪攻击",
+              "interval": 330,
+              "multiplier": 0.266
+            }
+          }
+        },
+        "普攻+刀刃":{
+          "mechanics":{
+            "periodic": {
+              "name": "刀刃攻击",
+              "interval": 300,
+              "multiplier": 0.48
+            }
+          }
+        },
+        "仅机枪":{
+          "mechanics":{
+            "periodic": {
+              "name": "机枪攻击",
+              "interval": 330,
+              "multiplier": 0.266
+            }
+          },
+          "base_action": {
+            "motion_multiplier": 0,
+            "pitch": [
+              330,
+              330
+            ]
+          }
+        },
+        "仅刀刃":{
+          "mechanics":{
+            "periodic": {
+              "name": "刀刃攻击",
+              "interval": 300,
+              "multiplier": 0.48
+            }
+          },
+          "base_action": {
+            "motion_multiplier": 0,
+            "pitch": [
+              300,
+              300
+            ]
+          }
+        }
+      },
+      "theme_color": "#000000",
+      "cn_name": "2B"
+    },
+    {
+      "id": "lovy",
+      "name": "ラヴィ・シュシュマルシュ",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.5,
+        "health_multiplier": 1.4,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "phases": [
+          {
+            "name": "启动阶段 (前16连击)",
+            "repeat": 1, 
+            "pitch": [
+              5300,
+              400,870,
+              1730,2470,
+              3030,3570,
+              4170,4700,
+              5330,5700,
+              6100,6500,6900,7300,7700,7100
+            ],
+            "motion_multiplier": 1
+          },
+          {
+            "name": "无限连打阶段",
+            "repeat": -1, 
+            "pitch": [200, 200], 
+            "motion_multiplier": 1 
+          }
+        ]
+      },
+      "hero_action": {
+        "name": "ザーコザーコ♂",
+        "damage_multiplier": 0.2,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#f588a5",
+      "cn_name": "拉薇"
+    },
+    {
+      "id": "rimuru",
+      "name": "リムル=テンペスト",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 1.05,
+        "move_speed": 2.6
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3752,
+          258,
+          760,
+          1300,
+          1840,
+          2684
+        ]
+      },
+      "hero_action": {
+        "name": "黒稲妻",
+        "damage_multiplier": 1.3,
+        "start_time": 2.3,
+        "end_time": 3.6
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#1E90FF",
+      "cn_name": "利姆鲁"
+    },
+    {
+      "id": "arudahab",
+      "name": "アル・ダハブ＝アルカティア",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.1,
+        "defense_multiplier": 0,
+        "health_multiplier": 1.2,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5143,
+          279,
+          713,
+          1147,
+          1742,
+          2184,
+          2926,
+          3353
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ナーブ・ソーバーン)",
+        "damage_multiplier": 1,
+        "start_time": 1.16,
+        "end_time": 1.2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#a05ea9",
+      "cn_name": "阿尔"
+    },
+    {
+      "id": "mikoto",
+      "name": "御坂美琴",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.25,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 1.05,
+        "move_speed": 2.64
+      },
+      "attributes": {
+        "range": 7,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.52,
+        "pitch": [
+          6852,
+          291,
+          492,
+          642,
+          782,
+          947,
+          1049,
+          1137,
+          1446,
+          1701,
+          2001,
+          2198,
+          2760,
+          2926,
+          3014,
+          3120,
+          3250,
+          3996,
+          4144,
+          4290,
+          4421,
+          4627,
+          4768,
+          4925,
+          5151,
+          5308,
+          5534
+        ]
+      },
+      "hero_action": {
+        "name": "放電現象",
+        "damage_multiplier": 2.5,
+        "start_time": 0.6,
+        "end_time": 1.6
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              0,
+              1600,
+              600
+            ],
+            [
+              0,
+              2400,
+              1400
+            ],
+            [
+              0,
+              3100,
+              2100
+            ]
+          ]
+        },
+        "stun_damage_boost": {
+          "multiplier": 1.75
+        },
+        "ha_damage": {
+          "stages": [
+            0.6,
+            1.55,
+            2.5
+          ],
+          "doubled_stages": [
+            1.2,
+            3.1,
+            5
+          ]
+        }
+      },
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.75}}
+      },
+      "theme_color": "#8B4513",
+      "cn_name": "御坂美琴"
+    },
+    {
+      "id": "accel",
+      "name": "アクセラレータ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.5,
+        "health_multiplier": 0.45,
+        "move_speed": 2.43
+      },
+      "attributes": {
+        "range": 13,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          2176,
+          353,
+          949,
+          1665,
+          1887
+        ]
+      },
+      "hero_action": {
+        "name": "ベクトルジャンプ攻撃",
+        "damage_multiplier": 1,
+        "start_time": 1.1,
+        "end_time": 1.4
+      },
+      "overrides": {
+        "ha_damage": {
+          "stages": [
+            1,
+            3.6
+          ]
+        }
+      },
+      "variants": {},
+      "theme_color": "#FFFFFF",
+      "cn_name": "一方通行"
+    },
+    {
+      "id": "buredora",
+      "name": "ぶれいずどらごん",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.1,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1.1,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 18,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          6231,
+          333,
+          1599,
+          2999,
+          4731
+        ]
+      },
+      "hero_action": {
+        "name": "ごくえんのいき",
+        "damage_multiplier": 2,
+        "start_time": 1.9,
+        "end_time": 3.5
+      },
+      "overrides": {},
+      "variants": {
+        "普攻+地火":{
+          "mechanics":{
+            "periodic": {
+              "name": "召唤物攻击",
+              "interval": 800,
+              "multiplier": 0.85
+            }
+          }
+        },
+        "蓄力追着喷+地火":{
+          "base_action": {
+            "motion_multiplier": 2,
+            "pitch": [
+              800,
+              800
+            ]
+          },
+          "mechanics":{
+            "periodic": {
+              "name": "召唤物攻击",
+              "interval": 800,
+              "multiplier": 0.85
+            }
+          }
+        }
+      },
+      "theme_color": "#c4bcd3",
+      "cn_name": "天空龙"
+    },
+    {
+      "id": "bell",
+      "name": "ベル・クラネル",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 0.95,
+        "move_speed": 2.72
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.77,
+        "pitch": [
+          4263,
+          133,
+          333,
+          666,
+          865,
+          1132,
+          1465,
+          2064,
+          2664,
+          3030
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ファイアボルト)",
+        "damage_multiplier": 1.7,
+        "start_time": 1.16,
+        "end_time": 3.4
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#FF0000",
+      "cn_name": "贝尔"
+    },
+    {
+      "id": "roxy",
+      "name": "ロキシー・ミグルディア",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.35,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.9,
+        "move_speed": 2.4
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3300,
+          333,
+          933,
+          1733,
+          2733
+        ]
+      },
+      "hero_action": {
+        "name": "氷霜撃(アイシクルブレイク)",
+        "damage_multiplier": 3,
+        "start_time": 0.6,
+        "end_time": 1.66
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.35}}
+      },
+      "theme_color": "#87CEEB",
+      "cn_name": "洛琪希"
+    },
+    {
+      "id": "nanigashi",
+      "name": "某＜なにがし＞",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.55,
+        "health_multiplier": 1,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 4.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3400,
+          233,
+          600,
+          1033,
+          1433,
+          2100
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(まっくろ！)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.33
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#89918d",
+      "cn_name": "某"
+    },
+    {
+      "id": "rockman",
+      "name": "ロックマン.EXE&光熱斗",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.95,
+        "health_multiplier": 0.9,
+        "move_speed": 2.52
+      },
+      "attributes": {
+        "range": 15,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          2734,
+          333,
+          867,
+          1400,
+          1933,
+          2467
+        ]
+      },
+      "hero_action": {
+        "name": "バリアブルソード",
+        "damage_multiplier": 1.1,
+        "start_time": 0.6,
+        "end_time": 1
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#0096FF",
+      "cn_name": "洛克人"
+    },
+    {
+      "id": "cusith",
+      "name": "クー・シー",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.05,
+        "defense_multiplier": 1.5,
+        "health_multiplier": 0.55,
+        "move_speed": 2.78
+      },
+      "attributes": {
+        "range": 5.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4467,
+          133,
+          333,
+          533,
+          733,
+          1000,
+          1167,
+          1600,
+          1767,
+          1900,
+          2033,
+          2200,
+          2933
+        ]
+      },
+      "hero_action": {
+        "name": "≡NYARMS≡",
+        "damage_multiplier": 1,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              0,
+              1400,
+              800
+            ],
+            [
+              0,
+              1400,
+              800
+            ],
+            [
+              0,
+              2500,
+              2000
+            ],
+            [
+              0,
+              180000,
+              200
+            ]
+          ]
+        },
+        "ha_damage": {
+          "stages": [
+            0.7,
+            4,
+            1,
+            0.95
+          ],
+          "hs_multiplier": 2
+        }
+      },
+      "variants": {
+        "3蓄机枪":{
+          "base_action": {
+            "motion_multiplier": 0.95,
+            "pitch": [
+              200,
+              200
+            ]
+          }
+        },
+        "必杀3蓄机枪":{
+          "base_action": {
+            "motion_multiplier": 1.8,
+            "pitch": [
+              200,
+              200
+            ]
+          }
+        }
+      },
+      "theme_color": "#fbfd3c",
+      "cn_name": "猫鲨"
+    },
+    {
+      "id": "denji",
+      "name": "デンジ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 0.6,
+        "health_multiplier": 1.05,
+        "move_speed": 2.62
+      },
+      "attributes": {
+        "range": 4.4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.65,
+        "pitch": [
+          5533,
+          200,
+          400,
+          733,
+          867,
+          1267,
+          1433,
+          1600,
+          1767,
+          1933,
+          2500,
+          2633,
+          2800,
+          3733,
+          3967,
+          4167,
+          4333,
+          4567
+        ]
+      },
+      "hero_action": {
+        "name": "斬撃",
+        "damage_multiplier": 2.5,
+        "start_time": 0.55,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#8B0000",
+      "cn_name": "电次"
+    },
+    {
+      "id": "power",
+      "name": "パワー",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.25,
+        "defense_multiplier": 0.7,
+        "health_multiplier": 0.95,
+        "move_speed": 2.66
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3734,
+          233,
+          667,
+          1300,
+          1933,
+          2533
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(血のハンマー)",
+        "damage_multiplier": 2.5,
+        "start_time": 1.16,
+        "end_time": 1.33
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.34}}
+      },
+      "theme_color": "#DC143C",
+      "cn_name": "帕瓦"
+    },
+    {
+      "id": "amistar",
+      "name": "アミスター=バランディン",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.95,
+        "move_speed": 2.28
+      },
+      "attributes": {
+        "range": 6.4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5400,
+          333,
+          1033,
+          1767,
+          2767,
+          3500
+        ]
+      },
+      "hero_action": {
+        "name": "聖王盾トルトゥーガ",
+        "damage_multiplier": 0,
+        "start_time": 0.55,
+        "end_time": 0.92
+      },
+      "overrides": {},
+      "variants": {
+        "必杀": {
+          "stats": {"attack_scaling_factor": 3.0},
+          "base_action": {
+            "motion_multiplier": 1,
+            "pitch": [
+              3933,
+              300,
+              667,
+              1300,
+              1600,
+              1900,
+              2167,
+              2467
+            ]
+          }
+        }
+      },
+      "theme_color": "#f25e59",
+      "cn_name": "副团长"
+    },
+    {
+      "id": "sinon",
+      "name": "シノン",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 0.95,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 0.95,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 18,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3600,
+          367,
+          1567,
+          2767
+        ]
+      },
+      "hero_action": {
+        "name": "長距離狙撃",
+        "damage_multiplier": 1.5,
+        "start_time": 0.7,
+        "end_time": 1.7
+      },
+      "overrides": {},
+      "variants": {
+        "距离3格":{"stats": {"attack_scaling_factor": 1.125}},
+        "距离6格":{"stats": {"attack_scaling_factor": 1.25}},
+        "距离9格":{"stats": {"attack_scaling_factor": 2.0}},
+        "距离15格":{"stats": {"attack_scaling_factor": 2.54}},
+        "距离20格":{"stats": {"attack_scaling_factor": 3.0}}
+      },
+      "theme_color": "#B0E0E6",
+      "cn_name": "诗乃"
+    },
+    {
+      "id": "tanya",
+      "name": "ターニャ・デグレチャフ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.5,
+        "health_multiplier": 0.85,
+        "move_speed": 2.69
+      },
+      "attributes": {
+        "range": 9,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.45,
+        "pitch": [
+          934,
+          233,
+          367,
+          500,
+          633
+        ]
+      },
+      "hero_action": {
+        "name": "手榴弾",
+        "damage_multiplier": 1.6,
+        "start_time": 0.77,
+        "end_time": 1.7
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#003366",
+      "cn_name": "谭雅"
+    },
+    {
+      "id": "ura",
+      "name": "鬼ヶ式 うら",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.7,
+        "health_multiplier": 1.4,
+        "move_speed": 2.59
+      },
+      "attributes": {
+        "range": 5.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.45,
+        "pitch": [
+          7266,
+          367,
+          500,
+          633,
+          1067,
+          1200,
+          1333,
+          1700,
+          1833,
+          1967,
+          2400,
+          2533,
+          2667,
+          3600,
+          3733,
+          3867,
+          4967,
+          5100,
+          5233
+        ]
+      },
+      "hero_action": {
+        "name": "霊符旋風",
+        "damage_multiplier": 1,
+        "start_time": 0.55,
+        "end_time": 0.92
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#fcdbbc",
+      "cn_name": "鬼式 温罗"
+    },
+    {
+      "id": "collapse",
+      "name": "コラプス",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 1.4,
+        "health_multiplier": 0.85,
+        "move_speed": 2.48
+      },
+      "attributes": {
+        "range": 4.3,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          2900,
+          167,
+          533,
+          86,
+          1233,
+          2000
+        ]
+      },
+      "hero_action": {
+        "name": "恒星質量ブラックホール",
+        "damage_multiplier": 0.5,
+        "start_time": 0.43,
+        "end_time": 1.7
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#c9a0f2",
+      "cn_name": "兔子"
+    },
+    {
+      "id": "bondrewd",
+      "name": "ボンドルド",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1.3,
+        "move_speed": 2.03
+      },
+      "attributes": {
+        "range": 7,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4967,
+          300,
+          833,
+          1267,
+          1500,
+          2167,
+          2567,
+          2967,
+          3433,
+          3667,
+          3900,
+          4133,
+          4367
+        ]
+      },
+      "hero_action": {
+        "name": "月に触れる/ファーカレス",
+        "damage_multiplier": 1,
+        "start_time": 1.06,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#F5F5DC",
+      "cn_name": "黎明卿"
+    },
+    {
+      "id": "miripoyu",
+      "name": "みりぽゆ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.8,
+        "health_multiplier": 1,
+        "move_speed": 2.6
+      },
+      "attributes": {
+        "range": 12,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.37,
+        "pitch": [
+          5667,
+          300,
+          467,
+          633,
+          800,
+          967,
+          1133,
+          1300,
+          1467,
+          1633,
+          1800,
+          2200,
+          2367,
+          2533,
+          2700,
+          2867,
+          3033,
+          3200,
+          3367,
+          3533,
+          3700,
+          4167,
+          4333,
+          4500,
+          4667,
+          4833,
+          5000,
+          5167,
+          5333,
+          5500,
+          5667
+        ]
+      },
+      "hero_action": {
+        "name": "ローリンギャル",
+        "damage_multiplier": 0.54,
+        "start_time": 1,
+        "end_time": 2
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#f3a8f9",
+      "cn_name": "辣妹"
+    },
+    {
+      "id": "gon",
+      "name": "ゴン=フリークス",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 1.1,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": [1,1,1,1,1.2],
+        "pitch": [
+          4166,
+          267,
+          633,
+          1133,
+          1800,
+          3267
+        ]
+      },
+      "hero_action": {
+        "name": "ジャジャン拳・グー",
+        "damage_multiplier": 1.2,
+        "start_time": 0.3,
+        "end_time": 1.2
+      },
+      "overrides": {
+        "ha_pitch": {
+          "values": [
+            [
+              0,
+              1200,
+              400
+            ],
+            [
+              0,
+              2800,
+              2000
+            ],
+            [
+              0,
+              4800,
+              4000
+            ]
+          ]
+        },
+        "ha_damage": {
+          "stages": [
+            1.5,
+            3,
+            5,
+            7.25,
+            10
+          ]
+        }
+      },
+      "variants": {
+        "大杰": {
+          "stats": {
+            "attack_multiplier": 12,
+            "defense_multiplier": 10.8,
+            "health_multiplier": 1.1,
+            "move_speed": 3.58
+          },
+          "base_action": {
+            "motion_multiplier": 1,
+            "pitch": [
+              4700,
+              467,
+              1233,
+              2067,
+              3233
+            ]
+          }
+        }
+      },
+      "theme_color": "#32CD32",
+      "cn_name": "杰=富力士"
+    },
+    {
+      "id": "kirua",
+      "name": "キルア=ゾルディック",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 0.85,
+        "move_speed": 2.73
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4700,
+          167,
+          467,
+          867,
+          1200,
+          1967,
+          2200,
+          2633,
+          3633
+        ]
+      },
+      "hero_action": {
+        "name": "雷掌",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.67
+      },
+      "overrides": {},
+      "variants": {
+        "必杀":{
+          "stats": {"attack_scaling_factor": 1.25},
+          "mechanics":{"speed_modifier":{"multiplier":0.7143}}
+        }
+      },
+      "theme_color": "#E6E6FA",
+      "cn_name": "奇犽"
+    },
+    {
+      "id": "chichan",
+      "name": "チーちゃん",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1,
+        "defense_multiplier": 0.55,
+        "health_multiplier": 0.95,
+        "move_speed": 2.67
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5167,
+          233,
+          700,
+          1200,
+          1867,
+          3167,
+          3467
+        ]
+      },
+      "hero_action": {
+        "name": "バイクダッシュ(スライドブレーキ)",
+        "damage_multiplier": 0.45,
+        "start_time": 1.16,
+        "end_time": 3.46
+      },
+      "overrides": {},
+      "variants": {
+        "仅必杀地火":{
+          "base_action": {
+            "motion_multiplier": 1.3,
+            "pitch": [
+              800,
+              800
+            ]
+          }
+        }
+      },
+      "theme_color": "#ffa02e",
+      "cn_name": "小琪"
+    },
+    {
+      "id": "kamijo",
+      "name": "上条当麻",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.05,
+        "defense_multiplier": 0.5,
+        "health_multiplier": 1.1,
+        "move_speed": 2.6
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3867,
+          300,
+          833,
+          1233,
+          2433
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(ダッシュアタック)",
+        "damage_multiplier": 2,
+        "start_time": 1.16,
+        "end_time": 1.67
+      },
+      "overrides": {},
+      "variants": {},
+      "mechanics": {"target_def_multiplier": 0},
+      "theme_color": "#FFFACD",
+      "cn_name": "上条当麻"
+    },
+    {
+      "id": "peru",
+      "name": "ーペルリニエ",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.1,
+        "defense_multiplier": 1.1,
+        "health_multiplier": 0.8,
+        "move_speed": 2.52
+      },
+      "attributes": {
+        "range": 6,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3033,
+          300,
+          733,
+          1233,
+          1667,
+          2100,
+          2433,
+          2767,
+          3100
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(『追憶と忘却』の物語)",
+        "damage_multiplier": 0.52,
+        "start_time": 1.16,
+        "end_time": 1.67
+      },
+      "overrides": {},
+      "variants": {
+        "同色3剑":{"stats": {"attack_scaling_factor": 1.204}}
+      },
+      "theme_color": "#5f8941",
+      "cn_name": "魔女"
+    },
+    {
+      "id": "sido",
+      "name": "シャドウ",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.4,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 0.95,
+        "move_speed": 2.6
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          4000,
+          267,
+          733,
+          1267,
+          1767,
+          2100,
+          2967
+        ]
+      },
+      "hero_action": {
+        "name": "敵背後ワープ",
+        "damage_multiplier": 0,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.3}}
+      },
+      "theme_color": "#000000",
+      "cn_name": "暗影"
+    },
+    {
+      "id": "poptepi",
+      "name": "ポプ子&ピピ美",
+      "role": "tnk",
+      "stats": {
+        "attack_multiplier": 1.45,
+        "defense_multiplier": 0.9,
+        "health_multiplier": 1.25,
+        "move_speed": 2.56
+      },
+      "attributes": {
+        "range": 6.4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          1200,
+          600,
+          1200
+        ]
+      },
+      "hero_action": {
+        "name": "ピピ美スイング",
+        "damage_multiplier": 1.9,
+        "start_time": 0,
+        "end_time": 0
+      },
+      "overrides": {},
+      "variants": {
+        "蓄力(时间间隔没找到我按0.6s算了)":{
+          "base_action": {
+            "motion_multiplier": 1.9,
+            "pitch": [
+              600,
+              600
+            ]
+          }
+        }
+      },
+      "theme_color": "#e2ae1f",
+      "cn_name": "Pop子&Pipi美"
+    },
+    {
+      "id": "merunya",
+      "name": "メルーニャ・ランチェルナ",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1,
+        "defense_multiplier": 1.3,
+        "health_multiplier": 0.9,
+        "move_speed": 2.54
+      },
+      "attributes": {
+        "range": 18,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          5500,
+          333,
+          400,
+          900,
+          967,
+          1567,
+          1633,
+          2700,
+          2767,
+          4400,
+          4467
+        ]
+      },
+      "hero_action": {
+        "name": "エレム・ステラー",
+        "damage_multiplier": 2.5,
+        "start_time": 1.5,
+        "end_time": 2.24
+      },
+      "overrides": {},
+      "variants": {
+        "精灵×1 + 额外克制伤害":{
+          "stats": {"attack_scaling_factor": 1.0},
+          "mechanics": {
+            "extra_hits": [
+              {
+                "name": "附加雷击",
+                "multiplier": 0.26,
+                "hit_count": 1
+              }
+            ]
+          }
+        },
+        "精灵×2 + 额外克制伤害":{
+          "stats": {"attack_scaling_factor": 1.083},
+          "mechanics": {
+            "extra_hits": [
+              {
+                "name": "附加雷击",
+                "multiplier": 0.26,
+                "hit_count": 2
+              }
+            ]
+          }
+        },
+        "精灵×3 + 额外克制伤害":{
+          "stats": {"attack_scaling_factor": 1.167},
+          "mechanics": {
+            "extra_hits": [
+              {
+                "name": "附加雷击",
+                "multiplier": 0.26,
+                "hit_count": 3
+              }
+            ]
+          }
+        },
+        "精灵×4 + 额外克制伤害":{
+          "stats": {"attack_scaling_factor": 1.25},
+          "mechanics": {
+            "extra_hits": [
+              {
+                "name": "附加雷击",
+                "multiplier": 0.26,
+                "hit_count": 4
+              }
+            ]
+          }
+        },
+        "精灵×5 + 额外克制伤害":{
+          "stats": {"attack_scaling_factor": 1.33},
+          "mechanics": {
+            "extra_hits": [
+              {
+                "name": "附加雷击",
+                "multiplier": 0.26,
+                "hit_count": 5
+              }
+            ]
+          }
+        }
+      },
+      "theme_color": "#484660",
+      "cn_name": "梅露尼亚"
+    },
+    {
+      "id": "fakes",
+      "name": "セイバー",
+      "role": "spr",
+      "stats": {
+        "attack_multiplier": 1.3,
+        "defense_multiplier": 0.7,
+        "health_multiplier": 1.05,
+        "move_speed": 2.65
+      },
+      "attributes": {
+        "range": 4,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3667,
+          200,
+          567,
+          1067,
+          1500,
+          2600
+        ]
+      },
+      "hero_action": {
+        "name": "ダッシュ(拳闘)",
+        "damage_multiplier": 1.3,
+        "start_time": 1.16,
+        "end_time": 1.67
+      },
+      "overrides": {},
+      "variants": {},
+      "theme_color": "#8B0000",
+      "cn_name": "理查一世"
+    },
+    {
+      "id": "fakea",
+      "name": "アーチャー",
+      "role": "atk",
+      "stats": {
+        "attack_multiplier": 1.5,
+        "defense_multiplier": 1.35,
+        "health_multiplier": 0.95,
+        "move_speed": 2.61
+      },
+      "attributes": {
+        "range": 5.5,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 1,
+        "pitch": [
+          3867,
+          400,
+          1000,
+          1567,
+          2500,
+          2667,
+          2833
+        ]
+      },
+      "hero_action": {
+        "name": "王の財宝",
+        "damage_multiplier": 0.4,
+        "start_time": 0.44,
+        "end_time": 1.2
+      },
+      "overrides": {},
+      "variants": {
+        "被动":{"stats": {"attack_scaling_factor": 1.35}}
+      },
+      "theme_color": "#FFD700",
+      "cn_name": "吉尔伽美什(拳)"
+    },
+    {
+      "id": "fakel",
+      "name": "ランサー",
+      "role": "gun",
+      "stats": {
+        "attack_multiplier": 1.2,
+        "defense_multiplier": 0.75,
+        "health_multiplier": 1,
+        "move_speed": 2.47
+      },
+      "attributes": {
+        "range": 16,
+        "color": "white"
+      },
+      "base_action": {
+        "motion_multiplier": 0.5,
+        "pitch": [
+          6433,
+          367,
+          567,
+          767,
+          1333,
+          1533,
+          1733,
+          2300,
+          2500,
+          2700,
+          3400,
+          3600,
+          3800,
+          4367,
+          4567,
+          4767,
+          4967,
+          5167
+        ]
+      },
+      "hero_action": {
+        "name": "前方持続回復エリア展開",
+        "damage_multiplier": 0,
+        "start_time": 0.45,
+        "end_time": 1.2
+      },
+      "overrides": {},
+      "variants": {
+        "血量＞50%":{"stats": {"attack_scaling_factor": 1.37}}
+      },
+      "theme_color": "#228B22",
+      "cn_name": "恩奇都"
+    }
+  ]
+}
