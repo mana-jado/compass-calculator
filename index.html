@@ -118,7 +118,18 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>选择角色</label>
-                    <select id="modal-char-select"></select>
+                    <div class="custom-select-wrapper" id="modal-char-custom-wrapper">
+                        <div class="custom-select-trigger" id="modal-char-trigger">
+                            <div class="selected-content" id="modal-char-selected-content">
+                                <span>选择角色</span>
+                            </div>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="custom-options hidden" id="modal-char-options">
+                            <!-- Options populated by JS -->
+                        </div>
+                        <select id="modal-char-select" style="display:none;"></select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>角色状态</label>

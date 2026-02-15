@@ -17,7 +17,8 @@ const state = {
     comparisonObjects: [], // Array of objects { id, charId, variant, atkMod, defMod, color, results }
     characterData: null,
     engine: null,
-    chartInstance: null
+    chartInstance: null,
+    lastSelectedCharId: null // Memory for last selected character
 };
 
 // --- Initialization ---
@@ -55,7 +56,11 @@ async function init() {
 
 function initializeDefaultComparisonObjects() {
     state.comparisonObjects = state.characterData.map(char => {
-        return createComparisonObject(char.id, 'default', 1.0, 1.0, char.theme_color || '#808080');
+        let variant = 'default';
+        if (char.default_variant_id && char.variants && char.variants[char.default_variant_id]) {
+            variant = char.default_variant_id;
+        }
+        return createComparisonObject(char.id, variant, 1.0, 1.0, char.theme_color || '#808080');
     });
 }
 
@@ -188,7 +193,10 @@ function getDisplayName(charId) {
 }
 
 function getVariantName(charId, variantKey) {
-    if (variantKey === 'default' || !variantKey) return '通常';
+    const char = state.characterData.find(c => c.id === charId);
+    if (variantKey === 'default' || !variantKey) {
+        return (char && char.default_label) ? char.default_label : '通常';
+    }
     // Ideally we would have localized variant names, for now use key
     return variantKey;
 }
@@ -396,6 +404,15 @@ function setupEventListeners() {
     addBtn.addEventListener('click', () => {
         populateCharSelect();
         modal.classList.remove('hidden');
+
+        // Task 3: Memory for last selected character
+        if (state.lastSelectedCharId) {
+            const select = document.getElementById('modal-char-select');
+            select.value = state.lastSelectedCharId;
+            updateCustomSelectTrigger(state.lastSelectedCharId);
+            // Trigger change to update variants
+            select.dispatchEvent(new Event('change'));
+        }
     });
 
     // Close add object modal when clicking outside
@@ -407,6 +424,8 @@ function setupEventListeners() {
 
     saveBtn.addEventListener('click', () => {
         const charId = document.getElementById('modal-char-select').value;
+        state.lastSelectedCharId = charId; // Task 3: Save selection
+
         const variant = document.getElementById('modal-variant-select').value;
         const atkMod = document.getElementById('modal-attack-mod').value;
         const defMod = document.getElementById('modal-defense-mod').value;
@@ -431,7 +450,11 @@ function setupEventListeners() {
         
         // Update Variants
         const variantSelect = document.getElementById('modal-variant-select');
-        variantSelect.innerHTML = '<option value="default">默认</option>';
+        
+        // Task 1: Custom Default Label
+        const defaultLabel = (char.default_label) ? char.default_label : '通常';
+        variantSelect.innerHTML = `<option value="default">${defaultLabel}</option>`;
+        
         if (char.variants) {
             Object.keys(char.variants).forEach(vKey => {
                 const opt = document.createElement('option');
@@ -439,6 +462,13 @@ function setupEventListeners() {
                 opt.textContent = vKey; // Localize if possible
                 variantSelect.appendChild(opt);
             });
+        }
+
+        // Task 2: Default Preferred Variant
+        if (char.default_variant_id && char.variants && char.variants[char.default_variant_id]) {
+            variantSelect.value = char.default_variant_id;
+        } else {
+            variantSelect.value = 'default';
         }
 
         // Update Default Color
@@ -503,11 +533,26 @@ function setupEventListeners() {
             let defaultColor = char.theme_color || '#808080';
             if (autoDarken) defaultColor = ensureVisibleColor(defaultColor);
 
-            newObjs.push(createComparisonObject(char.id, 'default', 1.0, 1.0, defaultColor));
+            // Task 2: Determine primary variant for Bulk Add (unchecked 'include all')
+            let primaryVariant = 'default';
+            if (!includeVariants && char.default_variant_id && char.variants && char.variants[char.default_variant_id]) {
+                primaryVariant = char.default_variant_id;
+            }
+
+            newObjs.push(createComparisonObject(char.id, primaryVariant, 1.0, 1.0, defaultColor));
             
             // Variants
             if (includeVariants && char.variants) {
                 Object.keys(char.variants).forEach(vKey => {
+                    // Avoid duplicating if primary was this variant (though usually primary is default, and default is not in variants)
+                    // But if we ever support default_variant_id pointing to a key in variants, we might duplicate it?
+                    // The loop adds ALL variants.
+                    // If primaryVariant is 'default', we added 'default'. Loop adds all special variants. OK.
+                    // If primaryVariant is 'special', we added 'special'. Loop adds all special variants. 'special' is added again.
+                    // So we should check for duplication if primaryVariant is not 'default'.
+                    
+                    if (primaryVariant !== 'default' && vKey === primaryVariant) return;
+
                     // Variants share base color usually, but could be different if defined?
                     // Assuming share base color for now
                     newObjs.push(createComparisonObject(char.id, vKey, 1.0, 1.0, defaultColor));
@@ -547,20 +592,81 @@ function setupEventListeners() {
             const modal = e.target.closest('.modal-overlay');
             if (modal) modal.classList.add('hidden');
         }
+        
+        // Close custom char dropdown when clicking outside
+        const dropdownWrapper = document.getElementById('modal-char-custom-wrapper');
+        if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
+            const options = document.getElementById('modal-char-options');
+            if (options) options.classList.add('hidden');
+        }
     });
+    
+    // Custom Char Dropdown Trigger
+    const charTrigger = document.getElementById('modal-char-trigger');
+    if (charTrigger) {
+        charTrigger.addEventListener('click', () => {
+            const options = document.getElementById('modal-char-options');
+            options.classList.toggle('hidden');
+        });
+    }
+}
+
+function updateCustomSelectTrigger(charId) {
+    const char = state.characterData.find(c => c.id === charId);
+    if (!char) return;
+
+    const triggerContent = document.getElementById('modal-char-selected-content');
+    const color = char.theme_color || '#808080';
+    triggerContent.innerHTML = `
+        <span class="color-dot" style="background-color: ${color}"></span>
+        <img src="assets/images/${char.id}.png" class="char-icon-small" onerror="this.style.display='none'">
+        <span>${getDisplayName(char.id)}</span>
+    `;
 }
 
 function populateCharSelect() {
     const select = document.getElementById('modal-char-select');
+    const customOptions = document.getElementById('modal-char-options');
+    
     select.innerHTML = '';
+    customOptions.innerHTML = '';
+
     state.characterData.forEach(char => {
+        // 1. Native Select Option
         const opt = document.createElement('option');
         opt.value = char.id;
         opt.textContent = getDisplayName(char.id);
         select.appendChild(opt);
+
+        // 2. Custom Option
+        const div = document.createElement('div');
+        div.className = 'custom-option';
+        // div.dataset.value = char.id; // Not strictly needed if we close over 'char'
+        
+        const color = char.theme_color || '#808080';
+        div.innerHTML = `
+            <span class="color-dot" style="background-color: ${color}"></span>
+            <img src="assets/images/${char.id}.png" class="char-icon-small" onerror="this.style.display='none'">
+            <span>${getDisplayName(char.id)}</span>
+        `;
+        
+        div.addEventListener('click', () => {
+            select.value = char.id;
+            updateCustomSelectTrigger(char.id);
+            customOptions.classList.add('hidden');
+            select.dispatchEvent(new Event('change')); // Trigger existing logic
+        });
+        
+        customOptions.appendChild(div);
     });
-    // Trigger change to set initial variants/color
-    select.dispatchEvent(new Event('change'));
+
+    // Initialize Trigger with first option or current value
+    if (state.characterData.length > 0) {
+        const initialId = select.value || state.characterData[0].id;
+        select.value = initialId; // Ensure sync
+        updateCustomSelectTrigger(initialId);
+        select.dispatchEvent(new Event('change'));
+    }
 }
 
 function renderCustomSelect() {
