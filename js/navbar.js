@@ -9,19 +9,26 @@ document.addEventListener("DOMContentLoaded", function() {
     <nav class="navbar">
         <div class="navbar-container">
             <a href="random.html" class="navbar-brand">Compass Tools</a>
-            <ul class="navbar-menu">
-                <li><a href="random.html">随机角色</a></li>
-                <li><a href="random_card.html">随机卡组</a></li>
-                <li><a href="oc_maker.html">角色生成</a></li>
-                <li><a href="calculator.html">伤害比较</a></li>
-            </ul>
-            <div class="navbar-lang" style="display: flex; align-items: center;">
-                <select id="global-lang-select" class="lang-select">
-                    <option value="cn_name">中文</option>
-                    <option value="name">日本語</option>
-                    <option value="id">English</option>
-                </select>
-                <div id="navbar-help-icon" class="navbar-help-icon" title="使用说明">?</div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="navbar-menu">
+                    <li><a href="random.html">随机角色</a></li>
+                    <li><a href="random_card.html">随机卡组</a></li>
+                    <li><a href="oc_maker.html">角色生成</a></li>
+                    <li><a href="calculator.html">伤害比较</a></li>
+                </ul>
+                <div class="navbar-lang" style="display: flex; align-items: center;">
+                    <select id="global-lang-select" class="lang-select">
+                        <option value="cn_name">中文</option>
+                        <option value="name">日本語</option>
+                        <option value="id">English</option>
+                    </select>
+                    <div id="navbar-help-icon" class="navbar-help-icon" title="使用说明">?</div>
+                </div>
             </div>
         </div>
     </nav>
@@ -74,6 +81,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const helpIcon = document.getElementById('navbar-help-icon');
     const helpModal = document.getElementById('navbar-help-modal');
     const helpClose = document.getElementById('navbar-help-close');
+    
+    // Initialize Navbar Toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggle && navbarCollapse) {
+        navbarToggle.addEventListener('click', () => {
+            navbarCollapse.classList.toggle('show');
+            navbarToggle.classList.toggle('active');
+        });
+    }
 
     if (helpIcon && helpModal && helpClose) {
         helpIcon.addEventListener('click', () => {

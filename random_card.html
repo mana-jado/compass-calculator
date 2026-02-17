@@ -13,6 +13,13 @@
             text-align: center;
             padding: 20px;
         }
+        @media (max-width: 768px) {
+            .random-container {
+                padding: 10px;
+                margin: 20px auto;
+                width: 80%;
+            }
+        }
         .random-container h1 {
             margin-bottom: 30px;
         }
@@ -45,8 +52,9 @@
             margin-top: 30px;
         }
         .card-item {
-            width: 200px;
-            height: 271px; /* Adjusted to match image aspect ratio (290/393) */
+            width: 100%; /* Fluid width */
+            aspect-ratio: 200/271; /* Maintain aspect ratio */
+            height: auto; /* Remove fixed height */
             border-radius: 10px;
             padding: 0; /* Removed padding to let image fill */
             color: white;
@@ -71,17 +79,49 @@
         .card-info {
             width: 100%;
             height: 100%;
-            padding: 15px;
+            padding: 10px; /* Reduced padding slightly for smaller screens */
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
+            overflow-y: auto; /* Allow scroll if text is too long */
         }
         
-        /* Specific layout for 4 cards to form a 2x2 grid */
+        /* Specific layout for 4 cards */
         .cards-grid.grid-2x2 {
             display: grid;
-            grid-template-columns: repeat(2, 200px);
+            grid-template-columns: repeat(4, 1fr); /* PC: 4 in a row */
             justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                display: grid; /* Use Grid for stable layout */
+                grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+                gap: 10px;
+                padding: 0; /* Remove internal padding, controlled by container */
+                box-sizing: border-box;
+                width: 100%;
+            }
+            .btn {
+                padding: 10px 0; /* Remove horizontal padding */
+                font-size: 0.85rem;
+                width: 100%; /* Fill grid cell */
+                white-space: nowrap;
+                min-width: auto; /* Reset min-width */
+            }
+            .cards-grid {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .cards-grid.grid-2x2 {
+                grid-template-columns: repeat(2, 1fr); /* Mobile: 2x2 */
+                gap: 10px;
+            }
+            .card-name { font-size: 0.9rem; }
+            .card-type { font-size: 0.8rem; }
+            .card-ability { font-size: 0.75rem; padding: 5px; }
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
