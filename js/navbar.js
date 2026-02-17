@@ -15,15 +15,33 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><a href="oc_maker.html">角色生成</a></li>
                 <li><a href="calculator.html">伤害比较</a></li>
             </ul>
-            <div class="navbar-lang">
+            <div class="navbar-lang" style="display: flex; align-items: center;">
                 <select id="global-lang-select" class="lang-select">
                     <option value="cn_name">中文</option>
                     <option value="name">日本語</option>
                     <option value="id">English</option>
                 </select>
+                <div id="navbar-help-icon" class="navbar-help-icon" title="使用说明">?</div>
             </div>
         </div>
     </nav>
+
+    <!-- Global Help Modal -->
+    <div id="navbar-help-modal" class="navbar-modal-overlay hidden">
+        <div class="navbar-modal">
+            <div class="navbar-modal-header">
+                <h3>数据来源</h3>
+                <button id="navbar-help-close" class="navbar-modal-close">&times;</button>
+            </div>
+            <div class="navbar-modal-body">
+                <p><strong>角色图片文件</strong><br>
+                微信小程序：康帕斯大百科</p>
+                
+                <p><strong>卡牌图片文件&角色数据</strong><br>
+                https://yagitools.cloudfree.jp/compas-deck/</p>
+            </div>
+        </div>
+    </div>
     `;
 
     // 3. Insert Navbar
@@ -52,7 +70,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 6. Expose global helper to get current language
+    // 6. Initialize Help Modal Logic
+    const helpIcon = document.getElementById('navbar-help-icon');
+    const helpModal = document.getElementById('navbar-help-modal');
+    const helpClose = document.getElementById('navbar-help-close');
+
+    if (helpIcon && helpModal && helpClose) {
+        helpIcon.addEventListener('click', () => {
+            helpModal.classList.remove('hidden');
+        });
+
+        helpClose.addEventListener('click', () => {
+            helpModal.classList.add('hidden');
+        });
+
+        helpModal.addEventListener('click', (e) => {
+            if (e.target === helpModal) {
+                helpModal.classList.add('hidden');
+            }
+        });
+    }
+
+    // 7. Expose global helper to get current language
     window.getGlobalLang = function() {
         return localStorage.getItem('compass_lang') || 'cn_name';
     };

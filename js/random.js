@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
         statSpd.textContent = currentChar.stats.move_speed.toFixed(2);
 
         // Update Image
-        charImg.src = `assets/images/${currentChar.id}.png`;
-        charImg.onerror = () => { charImg.src = 'assets/images/void.png'; };
+        charImg.src = `assets/images/characters/${currentChar.id}.png`;
+        charImg.onerror = () => { charImg.src = 'assets/images/characters/void.png'; };
 
         // Styling
         charRole.classList.remove('role-atk', 'role-gun', 'role-tnk', 'role-spr');

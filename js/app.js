@@ -227,7 +227,7 @@ function renderLeaderboard() {
         tr.innerHTML = `
             <td><span class="color-indicator" style="background-color: ${obj.color}"></span></td>
             <td>${index + 1}</td>
-            <td><img src="assets/images/${obj.charId}.png" onerror="this.src='';this.style.backgroundColor='${obj.color}'" alt="${obj.charId}"></td>
+            <td><img src="assets/images/characters/${obj.charId}.png" onerror="this.src='';this.style.backgroundColor='${obj.color}'" alt="${obj.charId}"></td>
             <td>${getDisplayName(obj.charId)}</td>
             <td>${getVariantName(obj.charId, obj.variant)}</td>
             <td>${dps}</td>
@@ -627,7 +627,7 @@ function updateCustomSelectTrigger(charId) {
     const color = char.theme_color || '#808080';
     triggerContent.innerHTML = `
         <span class="color-dot" style="background-color: ${color}"></span>
-        <img src="assets/images/${char.id}.png" class="char-icon-small" onerror="this.style.display='none'">
+        <img src="assets/images/characters/${char.id}.png" class="char-icon-small" onerror="this.style.display='none'">
         <span>${getDisplayName(char.id)}</span>
     `;
 }
@@ -654,7 +654,7 @@ function populateCharSelect() {
         const color = char.theme_color || '#808080';
         div.innerHTML = `
             <span class="color-dot" style="background-color: ${color}"></span>
-            <img src="assets/images/${char.id}.png" class="char-icon-small" onerror="this.style.display='none'">
+            <img src="assets/images/characters/${char.id}.png" class="char-icon-small" onerror="this.style.display='none'">
             <span>${getDisplayName(char.id)}</span>
         `;
         

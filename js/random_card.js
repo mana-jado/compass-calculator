@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('filter-modal');
     const btnCloseModal = document.getElementById('btn-close-modal');
     const btnApplyFilter = document.getElementById('btn-apply-filter');
+    const btnSelectAll = document.getElementById('btn-select-all');
+    const btnClearAll = document.getElementById('btn-clear-all');
     const filterTypeContainer = document.getElementById('filter-type');
 
     // Load Data
@@ -17,24 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             allCards = data;
-            initFilters();
+            // initFilters() removed - using static HTML
             applyFilters(); // Initial filter application (all selected)
         })
         .catch(err => console.error('Error loading card data:', err));
 
-    // Initialize Filters (Populate Types)
-    function initFilters() {
-        const types = new Set(allCards.map(c => c.type).filter(t => t)); // Get unique types
-        const sortedTypes = Array.from(types).sort();
-        
-        filterTypeContainer.innerHTML = '';
-        sortedTypes.forEach(type => {
-            const label = document.createElement('label');
-            label.className = 'checkbox-label';
-            label.innerHTML = `<input type="checkbox" value="${type}" checked> ${type}`;
-            filterTypeContainer.appendChild(label);
-        });
-    }
+    // Initialize Filters (Populate Types) - REMOVED
+    // function initFilters() { ... }
 
     // Apply Filters
     function applyFilters() {
@@ -58,12 +49,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const div = document.createElement('div');
         div.className = `card-item bg-${getColorClass(card.color)}`;
         
+        // Construct image path
+        const imgPath = `assets/images/cards/${card.rank}_${card.rarity}${card.img}.jpg`;
+
         div.innerHTML = `
-            <div class="card-name">${card.name}</div>
-            <div class="card-rarity">${card.rarity.toUpperCase()}</div>
-            <div class="card-type">${card.type}</div>
-            <div class="card-ability">${card.ability || '-'}</div>
+            <img src="${imgPath}" class="card-img" alt="${card.name}" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+            <div class="card-info hidden">
+                <div class="card-name">${card.name}</div>
+                <div class="card-rarity">${card.rarity.toUpperCase()}</div>
+                <div class="card-type">${card.type}</div>
+                <div class="card-ability">${card.ability || '-'}</div>
+            </div>
         `;
+
+        // Toggle click event
+        div.addEventListener('click', () => {
+            const img = div.querySelector('.card-img');
+            const info = div.querySelector('.card-info');
+            
+            // Only toggle if image loaded successfully (not hidden by onerror)
+            if (img.style.display !== 'none') {
+                img.classList.toggle('hidden');
+                info.classList.toggle('hidden');
+            }
+        });
+
         return div;
     }
 
@@ -120,6 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     btnApplyFilter.addEventListener('click', applyFilters);
+    
+    // Select All / Clear All
+    if (btnSelectAll) {
+        btnSelectAll.addEventListener('click', () => {
+            document.querySelectorAll('.modal-body input[type="checkbox"]').forEach(cb => cb.checked = true);
+        });
+    }
+    
+    if (btnClearAll) {
+        btnClearAll.addEventListener('click', () => {
+            document.querySelectorAll('.modal-body input[type="checkbox"]').forEach(cb => cb.checked = false);
+        });
+    }
     
     // Close modal when clicking outside
     modal.addEventListener('click', (e) => {
